@@ -1,0 +1,117 @@
+<div>
+    Mode when script will execute.  Each mode has a slightly different set of variables and result handling.
+
+    <h4>Default variables</h4>
+
+    All modes include these variables:
+
+    <dl>
+        <dt>mode</dt>
+        <dd>Mode type</dd>
+
+        <dt>container</dt>
+        <dd>Build wrapper instance</dd>
+    </dl>
+
+    <!-- ====================================================================== -->
+
+    <h3>SETUP</h3>
+
+    <dl>
+        <dt>build</dt>
+        <dd>hudson.model.AbstractBuild</dd>
+
+        <dt>launcher</dt>
+        <dd>hudson.Launcher</dd>
+
+        <dt>listener</dt>
+        <dd>hudson.model.BuildListener</dd>
+    </dl>
+
+    If result non-null hudson.model.Environment, will replace the default environment.
+    This will prevent TEAR_DOWN and ENVIRONMENT_VARIABLES from being called.
+
+    <!-- ====================================================================== -->
+
+    <h3>TEAR_DOWN</h3>
+
+    <dl>
+        <dt>build</dt>
+        <dd>hudson.model.AbstractBuild</dd>
+
+        <dt>launcher</dt>
+        <dd>hudson.Launcher</dd>
+    </dl>
+
+    If result non-null boolean value, when true allows the build to continue, false to abort.
+
+    <!-- ====================================================================== -->
+
+    <h3>DECORATE_LAUNCHER</h3>
+
+    <dl>
+        <dt>build</dt>
+        <dd>hudson.model.AbstractBuild</dd>
+
+        <dt>launcher</dt>
+        <dd>hudson.Launcher</dd>
+
+        <dt>listener</dt>
+        <dd>hudson.model.BuildListener</dd>
+    </dl>
+
+    If result non-null hudson.Launcher, replaces the launcher.
+
+    <!-- ====================================================================== -->
+
+    <h3>DECORATE_LOGGER</h3>
+
+    <dl>
+        <dt>build</dt>
+        <dd>hudson.model.AbstractBuild</dd>
+
+        <dt>logger</dt>
+        <dd>java.io.OutputStream</dd>
+    </dl>
+
+    If result non-null java.io.OutputStream, replaces the logger.
+
+    <!-- ====================================================================== -->
+
+    <h3>BUILD_VARIABLES</h3>
+
+    Configure build variables.
+
+    <dl>
+        <dt>build</dt>
+        <dd>hudson.model.AbstractBuild</dd>
+
+        <dt>vars</dt>
+        <dd>java.util.Map&lt;String,String&gt;</dd>
+    </dl>
+
+    Result ignored.
+
+    <!-- ====================================================================== -->
+
+    <h3>ENVIRONMENT_VARIABLES</h3>
+
+    Configure environment variables.
+
+    <dl>
+        <dt>build</dt>
+        <dd>hudson.model.AbstractBuild</dd>
+
+        <dt>vars</dt>
+        <dd>java.util.Map&lt;String,String&gt;</dd>
+    </dl>
+
+    Result ignored.
+
+    <!-- ====================================================================== -->
+
+    <h3>ALL</h3>
+
+    Invokes the same script for each mode.  Use the <tt>mode</tt> variable to switch.
+
+</div>
