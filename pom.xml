@@ -38,6 +38,8 @@ THE SOFTWARE.
 
   <name>Hudson Wrapper Script Plugin</name>
 
+  <url>http://wiki.hudson-ci.org/display/HUDSON/Wrapper+Script+Plugin</url>
+
   <licenses>
     <license>
       <name>The MIT license</name>
