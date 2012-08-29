@@ -29,11 +29,11 @@ THE SOFTWARE.
     <groupId>org.jvnet.hudson.plugins</groupId>
     <artifactId>hudson-plugin-parent</artifactId>
     <version>2.1.0</version>
-    <relativePath/>
+    <relativePath />
   </parent>
 
   <artifactId>wrapper-script</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>0.0.1</version>
   <packaging>hpi</packaging>
 
   <name>Hudson Wrapper Script Plugin</name>
